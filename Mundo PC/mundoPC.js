@@ -143,7 +143,7 @@ class Computador{
     }
 
     toString(){
-        return `idComputador: ${this._idPC} \n ${this._Monitor.toString()} \n ${this._teclado.toString()} \n ${this._raton.toString()}`;
+        return `idComputador: ${this._idPC} \n ${this._Monitor} \n ${this._teclado} \n ${this._raton}`;
     }
 }
 
@@ -175,7 +175,7 @@ class Orden{
     mostrarOrden(){
         var orden = "";
         for (let pc of this._computadoras){
-            orden += pc.toString() + "\n";
+            orden += `\n ${pc}`;
         }
         return `idOrden: ${this._idOrden} -> Computadoras: \n ${orden}`;
     }
@@ -204,6 +204,7 @@ var pc3 = new Computador("Buenas", mouse2, teclado, monitorcito);
 
 var orden = new Orden();
 orden.agregarComputadora(pc);
+orden.agregarComputadora(pc3);
 orden.agregarComputadora(pc3);
 console.log(orden.mostrarOrden());
 

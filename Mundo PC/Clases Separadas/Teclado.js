@@ -1,10 +1,10 @@
 class Teclado extends DispositivoEntrada{
 
-    static contadorTeclados = 0;
+    static contTeclados = 0;
 
     constructor(tipoEntrada, marca){
         super(tipoEntrada, marca);
-        this._idTeclado = ++ Teclado.contadorTeclados;
+        this._idTeclado = ++ Teclado.contTeclados;
     }
 
     get idTeclado(){
